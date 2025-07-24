@@ -4,88 +4,153 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Top Sights in Nigeria</title>
-  <link rel="stylesheet" href="site.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .card {
+      position: relative;
+      display: block;
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.15);
+    }
+    .label {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 8px 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .card {
+        width: 100% !important;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Top Sights in Nigeria</h1>
+
+  <!-- Header -->
+  <header style="background-color: #0a3d62; color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <h1 style="margin: 0; font-size: 24px;">Top Sights in Nigeria</h1>
+    <nav style="margin-top: 10px;">
+      <a href="/index.html" style="color:#fff; text-decoration:none; margin-right:20px;">Home</a>
+      <a href="#about" style="color:#fff; text-decoration:none; margin-right:20px;">About</a>
+      <a href="contact.html" style="color:#fff; text-decoration:none;">Contact</a>
+    </nav>
   </header>
-  
+
+  <!-- Gallery -->
   <div class="gallery">
-    <a href="https://example.com" class="image-card large">
-      <img src="/Sites/Niger - Gurara Waterfalls.jpeg" alt="Gurara Waterfalls" />
-      <div class="overlay">Gurara Waterfalls</div>
-    </a>
-    <a href="https://example.com" class="image-card wide">
-      <img src="/Sites/Benin – Benin City National Museum.jpeg" alt="Benin City National Museum" />
-      <div class="overlay">Benin City National Museum</div>
+    <!-- Use this card structure for each image -->
+    <a href="https://share.google/yCAOs8nKmgB0Vd9Fz" class="card" style="width: 300px;">
+      <img src="/Sites/Niger - Gurara Waterfalls.jpeg" alt="Gurara Waterfalls" style="height: 220px;">
+      <div class="label">Gurara Waterfalls</div>
     </a>
 
-    <a href="https://example.com" class="image-card tall">
-      <img src="/Sites/obudu resort.jpeg" alt="Obudu Resort" />
-      <div class="overlay">Obudu Resort</div>
+    <a href="https://share.google/sw0rF5amPAgZFCcom" class="card" style="width: 260px;">
+      <img src="/Sites/Benin – Benin City National Museum.jpeg" alt="Benin City National Museum" style="height: 180px;">
+      <div class="label">Benin City National Museum</div>
     </a>
 
-    <a href="https://example.com" class="image-card">
-      <img src="/Sites/Erin-Ijesha Waterfalls.jpeg" alt="Erin-Ijesha Waterfalls" />
-      <div class="overlay">Erin-Ijesha Waterfalls</div>
+    <a href="https://share.google/epAG4BVCwGre0qAYc" class="card" style="width: 280px;">
+      <img src="/Sites/obudu resort.jpeg" alt="Obudu Resort" style="height: 200px;">
+      <div class="label">Obudu Resort</div>
     </a>
 
-    <a href="https://example.com" class="image-card wide">
-      <img src="/Sites/Second floor 🖇.jpeg" alt="Nike Art Gallery" />
-      <div class="overlay">Nike Art Gallery</div>
+    <a href="https://share.google/4D1UFItzM8oceXAZG" class="card" style="width: 250px;">
+      <img src="/Sites/Erin-Ijesha Waterfalls.jpeg" alt="Erin-Ijesha Waterfalls" style="height: 190px;">
+      <div class="label">Erin-Ijesha Waterfalls</div>
     </a>
 
-    <a href="https://example.com" class="image-card">
-      <img src="/Sites/LEKKI CONSERVATION CENTRE VLOG __ Places to visit….jpeg" alt="Lekki Conservation Centre" />
-      <div class="overlay">Lekki Conservation Centre</div>
+    <a href="https://share.google/flw0tCVK845QjRETj" class="card" style="width: 290px;">
+      <img src="/Sites/Second floor 🖇.jpeg" alt="Nike Art Gallery" style="height: 220px;">
+      <div class="label">Nike Art Gallery</div>
     </a>
 
-    <a href="https://example.com" class="image-card tall">
-      <img src="/Sites/Place to travel this weekend; THE IBENO BEACH….jpeg" alt="Ibeno Beach" />
-      <div class="overlay">Ibeno Beach</div>
+    <a href="https://share.google/SN07CnMZnqO4xFmzx" class="card" style="width: 270px;">
+      <img src="/Sites/LEKKI CONSERVATION CENTRE VLOG __ Places to visit….jpeg" alt="Lekki Conservation Centre" style="height: 210px;">
+      <div class="label">Lekki Conservation Centre</div>
     </a>
 
-    <a href="https://example.com" class="image-card">
-      <img src="/Sites/Olumo Rock, Abeokuta.jpeg" alt="Olumo Rock" />
-      <div class="overlay">Olumo Rock</div>
+    <a href="https://share.google/iLoHomvssQgdHlC4n" class="card" style="width: 260px;">
+      <img src="/Sites/Place to travel this weekend; THE IBENO BEACH….jpeg" alt="Ibeno Beach" style="height: 190px;">
+      <div class="label">Ibeno Beach</div>
     </a>
 
-    <a href="https://example.com" class="image-card wide">
-      <img src="/Sites/Yankari-Game-Reserve_.jpeg" alt="Yankari Game Reserve" />
-      <div class="overlay">Yankari Game Reserve</div>
+    <a href="https://share.google/tcfaKQcFSZcbRTOBN" class="card" style="width: 250px;">
+      <img src="/Sites/Olumo Rock, Abeokuta.jpeg" alt="Olumo Rock" style="height: 180px;">
+      <div class="label">Olumo Rock</div>
     </a>
 
-    <a href="https://example.com" class="image-card large">
-      <img src="/Sites/Kajuru Castle (Kaduna) - 2021 All You Need to Know….jpeg" alt="Kajuru Castle" />
-      <div class="overlay">Kajuru Castle</div>
+    <a href="https://share.google/xguILjAuZzIO1wG80" class="card" style="width: 290px;">
+      <img src="/Sites/Yankari-Game-Reserve_.jpeg" alt="Yankari Game Reserve" style="height: 200px;">
+      <div class="label">Yankari Game Reserve</div>
     </a>
 
-    <a href="https://example.com" class="image-card">
-      <img src="/Sites/Shirui Hills.jpeg" alt="Shere Hills" />
-      <div class="overlay">Shere Hills</div>
+    <a href="https://share.google/NjgqcWmmx5r9OZfym" class="card" style="width: 300px;">
+      <img src="/Sites/Kajuru Castle (Kaduna) - 2021 All You Need to Know….jpeg" alt="Kajuru Castle" style="height: 220px;">
+      <div class="label">Kajuru Castle</div>
     </a>
 
-    <a href="https://example.com" class="image-card tall">
-      <img src="/Sites/Obudu mountain resort_ Cross River State_.jpeg" alt="Obudu Mountain Resort" />
-      <div class="overlay">Obudu Mountain Resort</div>
+    <a href="https://share.google/9WPrJvkPHUayIx6mN" class="card" style="width: 240px;">
+      <img src="/Sites/Shirui Hills.jpeg" alt="Shere Hills" style="height: 180px;">
+      <div class="label">Shere Hills</div>
     </a>
 
-    <a href="https://example.com" class="image-card">
-      <img src="/Sites/ec23f6ae-c4a6-4fde-8a8a-a344dcabcc18.jpeg" alt="Agbokim Waterfalls" />
-      <div class="overlay">Agbokim Waterfalls</div>
+    <a href="https://share.google/NgvIXufk0ZPj1r7hP" class="card" style="width: 250px;">
+      <img src="/Sites/ec23f6ae-c4a6-4fde-8a8a-a344dcabcc18.jpeg" alt="Agbokim Waterfalls" style="height: 200px;">
+      <div class="label">Agbokim Waterfalls</div>
     </a>
 
-    <a href="https://example.com" class="image-card wide">
-      <img src="/Sites/Millennium Park, Abuja_.jpeg" alt="Millennium Park" />
-      <div class="overlay">Millennium Park</div>
+    <a href="https://share.google/2eysFNNAUXfFMmBbd" class="card" style="width: 270px;">
+      <img src="/Sites/Millennium Park, Abuja_.jpeg" alt="Millennium Park" style="height: 190px;">
+      <div class="label">Millennium Park</div>
     </a>
 
-    <a href="https://example.com" class="image-card">
-      <img src="/Sites/Freedom Park, Lagos.jpeg" alt="Freedom Park" />
-      <div class="overlay">Freedom Park</div>
+    <a href="https://share.google/N6gkNftZrkruLYWNy" class="card" style="width: 240px;">
+      <img src="/Sites/Freedom Park, Lagos.jpeg" alt="Freedom Park" style="height: 180px;">
+      <div class="label">Freedom Park</div>
     </a>
   </div>
+
+  <!-- About Section -->
+  <section id="about" style="padding:30px; background-color:#003366; color:#fff; text-align:center;">
+    <h2 style="margin-bottom:10px;">About</h2>
+    <p style="max-width:700px; margin:auto;">Explore Nigeria’s rich and diverse culture, nature, and history through these amazing destinations. From waterfalls to mountains, each location holds a unique story.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color:#002244; color:#fff; text-align:center; padding:15px;">
+    &copy; 2025 Explore Nigeria. All rights reserved.
+  </footer>
+
 </body>
 </html>
