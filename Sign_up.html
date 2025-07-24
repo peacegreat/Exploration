@@ -1,142 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sign Up</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
-      rel="stylesheet" 
-    />
-    <style>
-      * {
-        box-sizing: border-box;
-        margin:0;
-        padding: 0; }
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      body {
-        font-family: 'Raleway', sans-serif;
-        background: #344a72;
-        color: #fff;
-        line-height: 1.8;
-      }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: rgb(234, 255, 248);
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-      a {
-        text-decoration: none;
-      }
+    .container {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
 
-      #container {
-        margin: 30px auto;
-        max-width: 400px;
-        padding: 20px;
-      }
+    .form-wrap h1 {
+      color: #014f86;
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
 
-      .form-wrap {
-        background: #fff;
-        padding: 15px 25px;
-        color: #333;
-      }
+    .form-wrap p {
+      text-align: center;
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
 
-      .form-wrap h1,
-      .form-wrap p {
-        text-align: center;
-      }
+    .form-group {
+      margin-bottom: 15px;
+    }
 
-      .form-wrap .form-group {
-        margin-top: 15px;
-      }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: 500;
+    }
 
-      .form-wrap .form-group label {
-        display: block;
-        color: #666;
-      }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border 0.3s ease;
+    }
 
-      .form-wrap .form-group input {
-        width: 100%;
-        padding: 10px;
-        border: #ddd 1px solid;
-        border-radius: 5px;
-      }
+    .form-group input:focus {
+      border-color: #49c1a2;
+      outline: none;
+    }
 
-      .form-wrap button {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        margin-top: 20px;
-        background: #49c1a2;
-        color: #fff;
-        cursor: pointer;
-      }
+    .checkbox-group {
+      margin-top: 10px;
+    }
 
-      .form-wrap button:hover {
-        background: #37a08e
-      }
+    .checkbox-group label {
+      font-size: 0.9rem;
+      color: #333;
+    }
 
-      .form-wrap .bottom-text {
-        font-size: 13px;
-        margin-top: 20px;
-      }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #014f86;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-      footer {
-        text-align: center;
-        margin-top: 10px;
-      }
+    button:hover {
+      background: #013a63;
+    }
 
-      footer a {
-        color:#49c1a2
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-      <div class="form-wrap">
-        <h1>Sign Up</h1>
-        <p>It's free and only takes a minute</p>
-        <form>
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" name="firstName" id="first-name" required/>
-          </div>
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" name="lastName" id="last-name" required/>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required/>
-          </div>
-          <div class="form-group">
-            <label for="password2">Confirm Password</label>
-            <input type="password" name="pasword2" id="password2" required/>
-          </div>
-          
-          <div>
-            <button type="submit">
-              <a href="/my_website_css.html">Sign Up</a> 
-            </button>
-          </div>
-          
-          <div><form action="submit_preferences.php" method="post">
-            <label for="newsletter">Subscribe to Newsletter?</label>
-            <input type="checkbox" id="newsletter" name="newsletter" value="subscribe" >
+    .bottom-text {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+
+    .bottom-text a {
+      color: #014f86;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #014f86;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-wrap">
+      <h1>Sign Up</h1>
+      <p>It's free and only takes a minute</p>
+      <form action="my_website_css.html" method="get">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" name="firstName" id="first-name" required />
         </div>
-          <p class="bottom-text">
-            By clicking the Sign Up button, you agree to our
-            <a href="#">Terms & Conditions</a> and
-            <a href="#">Privacy Policy</a>
-          </p>
-          
-        </form>
-      </div>
-      <footer>
-        <p>Already have an account? <a href="./login_page.html">Login Here</a></p>
-      </footer>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="lastName" id="last-name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div class="form-group">
+          <label for="password2">Confirm Password</label>
+          <input type="password" name="password2" id="password2" required />
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="newsletter" name="newsletter" value="subscribe" />
+          <label for="newsletter">Subscribe to Newsletter?</label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+
+        <p class="bottom-text">
+          By clicking the Sign Up button, you agree to our
+          <a href="#">Terms & Conditions</a> and
+          <a href="#">Privacy Policy</a>.
+        </p>
+      </form>
     </div>
-  </body>
+    <footer>
+      <p>Already have an account? <a href="login_page.html">Login Here</a></p>
+    </footer>
+  </div>
+</body>
 </html>
