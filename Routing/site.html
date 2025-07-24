@@ -11,6 +11,84 @@
       font-family: 'Poppins', sans-serif;
       background: #f5f5f5;
     }
+
+/* Navbar styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #0a3d62;
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 40px;
+  font-weight: bold;
+  
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    background-color: #0a3d62;
+    padding: 10px 0;
+  }
+
+  .navbar-links a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+}
+.intro-section {
+  max-width: 900px;
+  margin: 100px auto 40px auto; /* pushes below fixed header */
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-left: 6px solid #0a3d62;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  color: #333;
+  font-size: 17px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.intro-section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #0a3d62;
+  text-align: center;
+}
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -58,14 +136,25 @@
 <body>
 
   <!-- Header -->
-  <header style="background-color: #0a3d62; color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <header>
     <h1 style="margin: 0; font-size: 24px;">Top Sights in Nigeria</h1>
-    <nav style="margin-top: 10px;">
-      <a href="/index.html" style="color:#fff; text-decoration:none; margin-right:20px;">Home</a>
-      <a href="#about" style="color:#fff; text-decoration:none; margin-right:20px;">About</a>
-      <a href="contact.html" style="color:#fff; text-decoration:none;">Contact</a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="navbar-links">
+      <a href="/index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-  </header>
+  </header>  
+  <!-- Intro Section -->
+<section class="intro-section">
+  <h2>Welcome to Nigeria's Wonders 🌍</h2>
+  <p>
+    Discover Nigeria’s most iconic and breathtaking attractions—from the stunning Gurara and Erin-Ijesha Waterfalls to cultural treasures like the Benin City National Museum and Nike Art Gallery.
+    <br /><br />
+    Whether you're exploring natural wonders or historic landmarks, Nigeria offers a rich blend of adventure, history, and culture for every traveler.
+  </p>
+</section>
+
 
   <!-- Gallery -->
   <div class="gallery">
