@@ -43,7 +43,7 @@
   .logo {
     font-size: 28px;
     font-weight: 600;
-    color: #66fcd4;
+    color: #19e8f7;
   }
   
   /* Menu Icon */
@@ -69,11 +69,11 @@
   }
   
   .nav-links li a:hover {
-    color: aqua;
+    color: #19e8f7;
   }
   
   .content {
-    text-align: center;
+    text-align:left;
     margin-top: 16vh; /* Better vertical spacing */
     padding: 0 20px;
     animation: fadeInUp 1.2s ease;
@@ -94,7 +94,6 @@
       font-family: 'Playfair Display', serif;
       font-size: 52px;      
       color: #fff;
-      text-shadow: 3px 3px 12px rgba(0,0,0,0.5);
       margin-bottom: 20px;
     }
   
@@ -103,14 +102,12 @@
     font-size: 20px;
     max-width: 650px;
     margin: 0 auto 30px;    
-    color: #f0f0f0;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.3);
+    color: #f0f0f0;    
   }
   
   .btn {
     padding: 14px 35px;
-    background-color: #00fcd4;
-    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+    background-color: #19e8f7;
     text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
@@ -120,14 +117,13 @@
   
   .btn:hover {
     background-color: #ffffff;
-  color: #00fcd4;
-  box-shadow: 0 6px 16px rgba(0, 255, 255, 0.5);
+  color: #00ecc5;
   }
   
   .main-content-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     flex-wrap: wrap;
     padding: 0 50px;
     margin-top: 100px;
@@ -144,7 +140,7 @@
   /* Form */
   .form-box {
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 50px;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.75);
@@ -269,7 +265,7 @@
   }
   
   .contact-info a {
-    color: #6cf;
+    color: rgb(104, 197, 243);
     text-decoration: none;
   }
   
@@ -314,7 +310,7 @@
   
   .back-btn {
     display: inline-block;
-    background-color:rgba(0, 34, 68, 0.85);
+    background-color: #3498db;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -329,7 +325,7 @@
   }
   
   .back-btn:hover {
-    background-color: #019ca8;
+    background-color: #06afbb;
   }
   
   
