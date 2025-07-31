@@ -247,7 +247,7 @@
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  }
+      }
   
   .contact-container h1 {
     font-family: 'Playfair Display', serif;
@@ -267,6 +267,7 @@
   .contact-info a {
     color: rgb(104, 197, 243);
     text-decoration: none;
+    transition: color 0.3s ease;
   }
   
   .contact-info a:hover {
