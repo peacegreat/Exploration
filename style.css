@@ -134,6 +134,7 @@
   @media (max-width: 991px) {
     .content h1 {
       font-size: 40px;
+      margin-top: 20vh;
     }
   
     .content p {
@@ -150,7 +151,7 @@
   /* Small Screens (Phones) */
   @media (max-width: 576px) {
     .content {
-      margin-top: 12vh;
+      margin-top: 18vh;
       padding: 0 15px;
     }
   
