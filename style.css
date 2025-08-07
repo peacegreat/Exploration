@@ -75,7 +75,6 @@
   .content {
     text-align: left;
     margin-top: 16vh;
-    padding: 0 20px;
     animation: fadeInUp 1.2s ease;
   }
   
@@ -134,7 +133,7 @@
   @media (max-width: 991px) {
     .content h1 {
       font-size: 40px;
-      margin-top: 20vh;
+      margin-top: 10vh;
     }
   
     .content p {
@@ -151,8 +150,7 @@
   /* Small Screens (Phones) */
   @media (max-width: 576px) {
     .content {
-      margin-top: 18vh;
-      padding: 0 15px;
+      margin-top: 10vh;
     }
   
     .content h1 {
@@ -183,7 +181,7 @@
   /* Form */
   .form-box {
     position: absolute;
-    top: 30%;
+    top: 40%;
     right: 50px;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.75);
@@ -194,8 +192,10 @@
     animation: slideIn 1s ease 0.3s forwards;
     opacity: 0;
     color: #fff;
+    z-index: 10;
   }
   
+  /* Form content styles stay the same */
   .form-box h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -231,6 +231,7 @@
     color: aqua;
     text-decoration: none;
   }
+  
   @keyframes slideIn {
     from {
       opacity: 0;
@@ -242,6 +243,51 @@
     }
   }
   
+  /* -------- Responsive Fixes -------- */
+  
+  /* Medium screens (≤991px) */
+  @media (max-width: 991px) {
+    .form-box {
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: 90%;
+      max-width: 350px;
+      padding: 25px 20px;
+    }
+  }
+  
+  /* Small screens (≤576px) */
+  @media (max-width: 576px) {
+    .form-box {
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: 90%;
+      max-width: 300px;
+      padding: 20px 15px;
+    }
+  
+    .form-box h2 {
+      font-size: 20px;
+    }
+  
+    .form-box input {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .form-box .btn {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .form-box p {
+      font-size: 0.85rem;
+    }
+  }
+  
+    
   /* Responsive Styles */
   @media (max-width: 768px) {
     .menu-icon {
